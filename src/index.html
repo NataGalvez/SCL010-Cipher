@@ -2,14 +2,57 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Caesar Cipher</title>
+    <title> secretball.com </title>
     <link rel="stylesheet" href="style.css" />
+    <img src="../img/logo.jpg" class="logo">
+    <div class="menuNavegation">
+    <button type="button" class="menu" id="btnWho"> Quienes somos </button>
+    <button type="button" class="menu" id="btnMsgEncodes"> Mensajes Codificados</button>
+    <button type="button" class="menu" id="btnHome"> Inicio</button>
+    <button type="button" class="menu" id="btnContact"> Contacto </button>
+    </div>  
   </head>
   <body>
-    <div id="root">
-      <h1>Hola mundo!</h1>
+    <div id="paginaPrincipal" class="mostrar">
+    <h1> Estrategias, ideas y comentarios de forma secreta </h1>
+    <h2> Ingresa tu nombre </h2>
+    <input type="text" id="name" placeholder="Ingrese su nombre">
+    <button type="button" id="btnName"> Ingresar </button>
     </div>
-    <script src="cipher.js"></script>
+    <div id="hellow" class="ocultar">
+    <p class="msgWelcome">Hola <span id="saveName"></span> escoge una opción a realizar </p>
+    <button type="button" id="boton1" class="cuadro"> Cifrar </button>
+    <button type="button" id="boton2" class="cuadro"> Descifrar </button>
+    </div>
+    <div id="accionCifrar" class="ocultar"> 
+    <h3> Paso 1: Define el Numero de desplazamiento</h3>
+    <p class="offSet"> OffSet <span> <input type="number" id="offSetCipher" class="cuadrooffset" placeholder="N°"></span></p>
+    <h3> Paso 2: Ingrese el mensaje que desea cifrar </h3>
+    <textarea id="msg1" cols="30" rows="10" class="input" placeholder="Escriba aquí su mensaje"></textarea>
+    <button type="button" id="btnCipher" class="cuadro"> Cifrar </button>
+    </div>
+    <div id="cipherOk" class="ocultar">
+    <h3> Su mensaje ha sido cifrado con éxito </h3>
+    <p id="msgSecret" class="parrafo"> </p>
+    <a href="https://www.facebook.com/"> <button type="button" id="share" class="cuadro"> Compartir </button> </a> 
+    <button type="button" id="backBtn" class="cuadro"> Volver a Cifrar </button>
+    <button type="button" id="exitBtn" class="cuadro"> Salir </button>
+    </div>
+    <div id= "decode" class="ocultar">
+    <h3> Paso 1: Ingrese el Numero de desplazamiento </h3>
+    <p class="offSet"> OffSet<span> <input type="number" id="offSetDecode" class="cuadrooffset" placeholder="N°"></span> </p>
+    <h3> Paso 2: Ingrese el mensaje que desea descifrar </h3>
+    <textarea id="textEncode" cols="30" rows="10" placeholder="Escriba su mensaje aquí" class="input"></textarea>
+    <button type="button" id="btnDecipher" class="cuadro"> Descifrar </button>
+    </div>
+    <div id="decodeOk" class="ocultar">
+    <h3> Su mensaje ha sido descifrado con éxito </h3>
+    <p id="msgDecode" class="parrafo"></p>
+    <a href="https://www.facebook.com/" target="_blank"> <button type="button" id="compartir" class="cuadro"> Compartir </button> </a> 
+    <button type="button" id="backBtn2" class="cuadro"> Volver a descifrar </button>
+    <button type="button" id="exitBtn2" class="cuadro"> Salir </button>
+    </div>
     <script src="index.js"></script>
-  </body>
+    <script src="cipher.js"></script>
+</body>
 </html>
