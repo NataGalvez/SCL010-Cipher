@@ -1,10 +1,20 @@
 /*Acá va tu código*/
+document.getElementById("btnWho").addEventListener("click", ()=>{
+	document.getElementById("paginaPrincipal").style.display = "none";
+	document.getElementById("msgSecret").style.display = "none";
+	document.getElementById("cipherOk").style.display = "none";
+	document.getElementById("accionCifrar").style.display = "none";
+	document.getElementById("WhoAreWe").style.display = "block";
+}) 
+document.getElementById("btnHome").addEventListener("click",()=>{
+	document.getElementById("WhoAreWe").style.display = "none";
+	document.getElementById("paginaPrincipal").style.display = "block";
+})
 document.getElementById("btnName").addEventListener("click", welcome);
 function welcome()
 {
-let saveName = document.getElementById("name").value;
-document.getElementById("saveName").innerHTML = saveName;
 document.getElementById("paginaPrincipal").style.display = "none";
+document.getElementById("WhoAreWe").style.display = "none";
 document.getElementById("hellow").style.display = "block";
 }
 
